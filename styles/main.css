@@ -27,13 +27,13 @@ body {
     border: 3px;
     box-sizing: border-box;
 
-    border-style: solid;
-    border-color: blue;
+    /*border-style: solid;
+    border-color: blue;*/
 }
 
 .grid-container > div {
-   border-style: solid;
-   border-color: red;
+   /*border-style: solid;
+   border-color: red;*/
  }
  
 .grid-container-center {
@@ -43,8 +43,8 @@ body {
 }
 
 .grid-container-center div {
-    border-style: solid;
-    border-color: green;
+    /*border-style: solid;
+    border-color: green;*/
 }
 
 .center-items {
