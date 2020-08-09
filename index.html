@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Gun Fighters</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./styles/main.css'>
     <script src='./js/main.js'></script>
 </head>
-<body>
-    <img src="./src/background.svg" id="bg" alt="">
+
+<body class="background">
     <div class="grid-container">
         <div class="header pos-r">
-            <button id="startGameButton" class="">Comenzar juego</button>
-        </div>
-        <div class="notification pos-r">
-            <div class="center">
-                <p id="notification" class="text-center"></p>
+            <button id="startGameButton" class="pos-a btn-success">Jugar</button>
+            <div class="h-100 center-items">
+                <div class="notification-container">
+                    <p id="notification" class="text-center"></p>
+                </div>
             </div>
         </div>
-        <div class="button1 pos-r">
-            <!--button id="mobile_shoot_p1_button" class="center">Shoot</button-->
+        <div class="grid-container-center">
+            <div class="center-items">
+                <div id="q" class="center-items control-container">
+                    <p class="text-center"></p>
+                </div>
+            </div>
+            <div class="pos-r">
+                <img id="player1" class="sprite" src="./src/sprites/p1_stand.svg" alt="cowboy1"></img>
+            </div>
+            <div class="pos-r">
+                <img id="player2" class="sprite" src="./src/sprites/p2_stand.svg" alt="cowboy2"></img>
+            </div>
+            <div class="center-items">
+                <div id="p" class="center-items control-container">
+                    <p class="text-center"></p>
+                </div>
+            </div>
+        </div>
+        <div>
+        </div>
+        <!--div class="notification">
+            <div class="center">
+            </div>
+        </div>
+        <div class="button1">
+            <button id="mobile_shoot_p1_button" class="center">Shoot</button>
             <div class="center text-container">
                 <h1 class="text-center">Presiona "Q" para disparar</h1>
             </div>
@@ -31,13 +56,13 @@
         <div class="sprite2">
             <img id="player2" class="sprite horizontal-center" src="./src/sprites/p2_stand.svg" alt="cowboy2"></img>
         </div>
-        <div class="button2 pos-r">
-            <!--button id="mobile_shoot_p2_button" class="center">Shoot</button-->
+        <div class="button2">
+            <button id="mobile_shoot_p2_button" class="center">Shoot</button>
             <div class="center text-container">
                 <h1 class="text-center">Presiona "P" para disparar</h1>
             </div>
-        </div>
-        <div class="footer">footer</div>
+        </div-->
     </div>
 </body>
+
 </html>
