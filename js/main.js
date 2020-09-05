@@ -3,12 +3,23 @@ const PLAYER_2_KEY = 'p';
 const MIN_ROUND_WAIT = 2000;
 const MAX_ROUND_WAIT = 6500;
 
-const PLAYER_1_SPRITE_STAND = './src/sprites/p1_stand.svg';
-const PLAYER_2_SPRITE_STAND = './src/sprites/p2_stand.svg';
-const PLAYER_1_SPRITE_SHOOT = './src/sprites/p1_shoot.svg';
-const PLAYER_2_SPRITE_SHOOT = './src/sprites/p2_shoot.svg';
-const PLAYER_1_SPRITE_DEATH = './src/sprites/p1_death.svg';
-const PLAYER_2_SPRITE_DEATH = './src/sprites/p2_death.svg';
+const PLAYER_1_SPRITE_STAND = new Image();
+PLAYER_1_SPRITE_STAND.src = './src/sprites/p1_stand.svg';
+
+const PLAYER_2_SPRITE_STAND = new Image();
+PLAYER_2_SPRITE_STAND.src = './src/sprites/p2_stand.svg';
+
+const PLAYER_1_SPRITE_SHOOT = new Image();
+PLAYER_1_SPRITE_SHOOT.src = './src/sprites/p1_shoot.svg';
+
+const PLAYER_2_SPRITE_SHOOT = new Image();
+PLAYER_2_SPRITE_SHOOT.src = './src/sprites/p2_shoot.svg';
+
+const PLAYER_1_SPRITE_DEATH = new Image();
+PLAYER_1_SPRITE_DEATH.src = './src/sprites/p1_death.svg';
+
+const PLAYER_2_SPRITE_DEATH = new Image();
+PLAYER_2_SPRITE_DEATH.src = './src/sprites/p2_death.svg';
 
 const BACKGROUND_MUSIC = './src/music/background.ogg';
 const SHOOT_1_FX = './src/fx/shoot_1.wav';
@@ -18,7 +29,7 @@ const DEATH_2_FX = './src/fx/death_2.mp3';
 const DEATH_3_FX = './src/fx/death_3.mp3';
 
 window.addEventListener('load', () => {
-
+    document.getElementById('loading').style.display = 'none';
     let backgroundMusic = new Audio(BACKGROUND_MUSIC);
     backgroundMusic.volume = 0.4;
 
@@ -63,8 +74,8 @@ window.addEventListener('load', () => {
     }
 
     function startGame() {
-        player1.src = PLAYER_1_SPRITE_STAND;
-        player2.src = PLAYER_2_SPRITE_STAND;
+        player1.src = PLAYER_1_SPRITE_STAND.src;
+        player2.src = PLAYER_2_SPRITE_STAND.src;
         enableGuns = false;
         roundActive = false;
         notificationText.textContent = '';
@@ -121,25 +132,25 @@ window.addEventListener('load', () => {
             if (enableGuns) {
                 if (key == PLAYER_1_KEY) {
                     notificationText.textContent = 'Gana jugador 1';
-                    player1.src = PLAYER_1_SPRITE_SHOOT;
-                    player2.src = PLAYER_2_SPRITE_DEATH;
+                    player1.src = PLAYER_1_SPRITE_SHOOT.src;
+                    player2.src = PLAYER_2_SPRITE_DEATH.src;
                 }
                 else {
                     notificationText.textContent = 'Gana jugador 2';
-                    player1.src = PLAYER_1_SPRITE_DEATH;
-                    player2.src = PLAYER_2_SPRITE_SHOOT;
+                    player1.src = PLAYER_1_SPRITE_DEATH.src;
+                    player2.src = PLAYER_2_SPRITE_SHOOT.src;
                 }
             }
             else {
                 if (key == PLAYER_1_KEY) {
                     notificationText.textContent = 'Jugador 1 es un traidor. Gana jugador 2';
-                    player1.src = PLAYER_1_SPRITE_DEATH;
-                    player2.src = PLAYER_2_SPRITE_SHOOT;
+                    player1.src = PLAYER_1_SPRITE_DEATH.src;
+                    player2.src = PLAYER_2_SPRITE_SHOOT.src;
                 }
                 else {
                     notificationText.textContent = 'Jugador 2 es un traidor. Gana jugador 1';
-                    player1.src = PLAYER_1_SPRITE_SHOOT;
-                    player2.src = PLAYER_2_SPRITE_DEATH;
+                    player1.src = PLAYER_1_SPRITE_SHOOT.src;
+                    player2.src = PLAYER_2_SPRITE_DEATH.src;
                 }
             }
 

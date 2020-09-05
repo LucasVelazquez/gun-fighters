@@ -10,6 +10,15 @@ body {
     color: black;
 }
 
+#loading {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: blueviolet;
+    display: block;
+    z-index: 5;
+}
+
 .background {
     background-image: url("../src/background.svg");
     background-position-x: center;
