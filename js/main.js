@@ -1,3 +1,5 @@
+screen.orientation.lock('landscape');
+
 const PLAYER_1_KEY = 'q';
 const PLAYER_2_KEY = 'p';
 const MIN_ROUND_WAIT = 2000;
